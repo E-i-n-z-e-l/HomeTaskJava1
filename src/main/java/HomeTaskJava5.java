@@ -31,11 +31,12 @@ public class HomeTaskJava5 {
         ArrayCry(arr, -4);
         System.out.println(Arrays.toString(arr));
     }
+
     public static int[] ArrayCry(int[] a, int b) {
         int temp = a[0];
         if (b > 0) {
             while (b > 0) {
-                for (int i = 0; i < a.length - 1; i ++) {
+                for (int i = 0; i < a.length - 1; i++) {
                     for (int j = 0; j < a.length - 1; j++) {
                         temp = a[j];
                         a[j] = a[j + 1];
@@ -51,14 +52,14 @@ public class HomeTaskJava5 {
         }
         if (b < 0) {
             while (b < 0) {
-                for (int i = a.length - 1; i > 0 ; i--){
+                for (int i = a.length - 1; i > 0; i--) {
                     for (int j = a.length - 1; j > 0; j--) {
                         temp = a[j];
                         a[j] = a[j - 1];
                         a[j - 1] = temp;
                     }
                 }
-            b = b + 1;
+                b = b + 1;
             }
         }
         return a;
